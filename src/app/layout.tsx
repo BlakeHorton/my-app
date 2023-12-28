@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ModeToggle } from '@/components/ui/mode-toggle'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +29,10 @@ export default function RootLayout({
           <header className="sticky top-0 h-14 shadow flex items-center dark:shadow-white/10">
             <div className="flex items-center justify-between flex-1 px-5">
               <h1 className="text-xl font-bold">Logo</h1>
-              <ModeToggle />
+              <div className="flex items-center gap-x-5">
+                <Link href="/dashboard">Dashboard</Link>
+                <ModeToggle />
+              </div>
             </div>
           </header>
           {children}
