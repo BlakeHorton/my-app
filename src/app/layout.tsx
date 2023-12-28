@@ -26,13 +26,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 h-14 shadow flex items-center dark:shadow-white/10">
+          <header className="sticky top-0 h-14 shadow flex items-center dark:shadow-white/10 bg-background z-40">
             <div className="flex items-center justify-between flex-1 px-5">
-              <h1 className="text-xl font-bold">Logo</h1>
-              <div className="flex items-center gap-x-5">
-                <Link href="/dashboard">Dashboard</Link>
-                <ModeToggle />
-              </div>
+              <Link href="/">
+                <h1 className="text-xl font-bold">Logo</h1>
+              </Link>
+              <ModeToggle />
             </div>
           </header>
           {children}
